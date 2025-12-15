@@ -6,7 +6,7 @@ while(count < 10): #para entrar al bucle
     count += 1
  """
 
-""" count = 0
+""" count = 0l
 
 while (count < 10):
     count = count + 1
@@ -16,7 +16,7 @@ while (count < 10):
  """
 
 """ count = 0
-
+#break, continue, while#
 while( count < 10):
     count = count + 1
     print(count) """
