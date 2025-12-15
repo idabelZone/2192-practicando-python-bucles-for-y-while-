@@ -1,6 +1,7 @@
 """ count = 1
 
-while(count < 10):
+while(count < 10): #para entrar al bucle
+    count = count + 1 # para salir del bucle
     print("Estoy acá", count)
     count += 1
  """
