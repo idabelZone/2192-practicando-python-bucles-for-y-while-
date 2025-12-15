@@ -1,1 +1,28 @@
 
+#Lo que vas a practicar en esta revisión:
+
+#Uso de lazos for y while, que nos permiten ejecutar un bloque de código repetidamente mientras una condición sea verdadera. La lectura de un lazo puede entenderse como "repite hasta que...".
+#Concepto de bucles infinitos, que ocurren cuando la condición de un lazo nunca se vuelve falsa.
+#Hablamos sobre las instrucciones break y continue, que alteran el flujo de ejecución de los lazos. break finaliza el lazo, mientras que continue salta la iteración actual y continúa con la siguiente.
+#Exploramos funciones que se utilizan frecuentemente con lazos, como len(), range().
+
+Problema 1
+# Ana está desarrollando un programa que necesita procesar una lista de 5 nombres de clientes para generar informes mensuales. Para ello, necesita escribir un programa que recorra la lista de nombres y muestre cada cliente.
+# Ayuda a Ana a decidir entre usar un lazo for o while. Escribe el programa usando el lazo que creas más adecuado para esta tarea y explica por qué elegiste ese lazo.
+
+#Código
+clientes = ["Juan", "Maria", "Carlos", "Ana", "Beatriz"]
+print(f"Lista de {len(clientes)} clientes:") # Es bueno saber cuántos hay
+
+# Este es el código principal, usando el bucle 'for'
+for cliente in clientes:
+    # ❌ Tu código tenía: print("Hola" + clientes)  <-- Error: estaba intentando sumar "Hola" con la lista completa.
+    # ✅ La corrección: Usamos 'cliente' (la variable temporal) para obtener el nombre actual.
+    print(f"Generando informe para: Hola, {cliente}.") 
+
+# ❌ La línea 'for in range (5' no es necesaria para iterar sobre la lista
+
+Problema 2
+
+#André está probando una nueva función en el backend de Buscante que procesa datos en un bucle. Durante las pruebas, se dio cuenta de que el sistema dejó de responder y sospecha que el problema está en un bucle infinito.
+
