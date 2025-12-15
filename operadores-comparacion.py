@@ -1,6 +1,7 @@
 """ Operadores comparación
 
 == igual
+!=diferente 
 >  más grande
 >= más grande o igual
 < más pequeno
