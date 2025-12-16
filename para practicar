@@ -26,3 +26,167 @@ Problema 2
 
 #André está probando una nueva función en el backend de Buscante que procesa datos en un bucle. Durante las pruebas, se dio cuenta de que el sistema dejó de responder y sospecha que el problema está en un bucle infinito.
 
+Código 
+contador = 0
+
+while contador < 10:
+    print("Procesando datos...")
+    
+    #SOLUCIÓN: Añadir el paso de progresión
+    contador += 1 
+
+print("Proceso de datos finalizado.")
+
+Problema 3
+
+#Marcos está desarrollando un programa para mostrar un mensaje de bienvenida repetidamente en la consola, como parte de una campaña de marketing de su plataforma llamada Buscante. Quiere asegurarse de que el mensaje se muestre 5 veces.
+
+#Ayuda a Marcos a escribir un programa que muestre el mensaje: "¡Bienvenido a Buscante!" el número exacto de veces que necesita.
+
+Codigo:
+# Usamos for y range(5) para asegurarnos de que se ejecuta exactamente 5 veces
+for i in range(5):
+    print("¡Bienvenido a Buscante!")
+
+Problema 4 
+# Estás recibiendo una lista de valores que representan los productos de tu tienda virtual y te gustaría calcular la suma total de esos productos para entender el desempeño financiero semanal.
+# Crea un programa para implementar la suma. 
+
+Código 
+valores = [10, 20, 30, 40, 50]
+
+# 1. Inicializar la variable de suma
+# Es FUNDAMENTAL que empiece en 0 para que la suma sea correcta
+suma_total = 0 
+##esta parte está porque es fundamental para que el código funcione
+
+# 2. Usar el bucle for para recorrer cada 'valor' en la lista 'valores'
+for valor in valores:
+    # 3. En cada vuelta, se suma el valor actual a la suma_total
+    suma_total = suma_total + valor # O la versión abreviada: suma_total += valor
+
+# 4. Imprimir el resultado final fuera del bucle
+print(f"La suma total de los productos es: {suma_total}")
+
+otra forma de hacerlo:
+valores = [10, 20, 30, 40, 50]
+
+# Usando la función 'sum()'
+total_rapido = sum(valores)
+
+print(f"La suma total es: {total_rapido}")
+
+Problema 5
+# Ana está desarrollando su portafolio para exhibir los proyectos de Python que ha completado. Ella organizó una lista con el nombre de cada proyecto, pero se dio cuenta de que algunos elementos pueden estar ausentes, apareciendo como None:
+# Crea un programa que ayude a Ana a recorrer la lista de proyectos y muestre los nombres de los proyectos válidos. Si encuentra un elemento None, el programa debe mostrar el mensaje: "Proyecto ausente".
+
+Código:
+
+proyectos = ["sitio web", "juego", "análisis de datos", None, "aplicativo móvil"]
+
+print("--- Revisando Portafolio de Ana ---")
+
+# Usamos 'for' para revisar cada elemento, uno por uno
+for proyecto in proyectos:
+    
+    # Usamos un IF para verificar si el elemento NO es None
+    if proyecto is not None:
+        # Si el proyecto NO es None, lo imprimimos (es un proyecto válido)
+        print(f"✅ Proyecto Válido: {proyecto}")
+    else:
+        # Si el proyecto SÍ es None (porque el 'if' fue False), imprimimos la alerta
+        print("⚠️ Proyecto ausente")
+
+print("--- Revisión Finalizada ---")
+
+Problema 6
+## José está desarrollando una funcionalidad en el sistema de Buscante para interrumpir la búsqueda tan pronto como se encuentre un libro específico. La lista de libros ya registrados en el sistema es la siguiente:
+# libros = ["1984", "Cien años de soledad", "El Principito", "El Hobbit", "Orgullo y Prejuicio"]
+# Ayuda a José a crear un programa que recorra la lista y muestre el mensaje "Libro encontrado: <nombre del libro>" tan pronto como se encuentre el libro "El Hobbit". Después de encontrar el libro, el programa debe detener inmediatamente la búsqueda, sin verificar los libros restantes.
+
+Código:
+libros = ["1984", "Cien años de soledad", "El Principito", "El Hobbit", "Orgullo y Prejuicio"]
+
+libro_buscado = "El Hobbit"
+
+print(f"Iniciando búsqueda de '{libro_buscado}'...")
+print("-" * 35)
+
+# 1. Usamos 'for' para recorrer cada elemento (libro) de la lista
+for libro in libros:
+    
+    # 2. Mostramos el libro que estamos revisando para seguimiento
+    print(f"Revisando: {libro}")
+    
+    # 3. Condición IF: ¿Es el libro actual el que buscamos?
+    if libro == libro_buscado:
+        
+        # 4. Mostrar el mensaje final
+        print(f"\n¡ENCONTRADO! Libro encontrado: {libro}")
+        
+        # 5. Detener el bucle inmediatamente
+        # El comando 'break' hace que el programa salte AQUÍ (fuera del bucle)
+        break 
+
+print("-" * 35)
+print("Búsqueda finalizada.")
+
+Problema 7
+## Estás desarrollando un sistema de control de inventario para Buscante. Uno de los requisitos es verificar la cantidad de ejemplares de un libro en inventario y continuar vendiendo hasta que el inventario se agote. Siempre que se realiza una venta, el sistema debe informar al usuario y actualizar la cantidad disponible.
+
+## Crea un programa que simule las ventas de un libro con el inventario inicial de 5 ejemplares. El programa debe mostrar el mensaje "¡Venta realizada! Inventario restante: <cantidad>" con cada venta y, al final, mostrar el mensaje "Inventario agotado".
+
+Código: 
+# 1. Inicialización: Definimos el stock inicial
+inventario = 5
+
+print("--- Inicio de la Simulación de Ventas ---")
+print(f"Stock inicial del libro: {inventario} ejemplares")
+print("-" * 40)
+
+# 2. Bucle WHILE: Se ejecuta MIENTRAS la condición sea verdadera
+# El bucle se repite mientras el inventario sea MAYOR que 0
+while inventario > 0:
+    
+    # 3. Proceso: Se simula la venta (se resta 1 al inventario)
+    inventario -= 1  # Esto es igual a: inventario = inventario - 1
+    
+    # 4. Feedback: Se informa al usuario del estado actual
+    print(f"¡Venta realizada! Inventario restante: {inventario}")
+
+# 5. Código final: Cuando el bucle termina (inventario ya no es > 0, sino 0)
+print("-" * 40)
+print("Inventario agotado")
+
+Problema 8
+#Aline está implementando una funcionalidad que muestra mensajes personalizados para los clientes durante una promoción especial de su nueva librería. El sistema debe mostrar un mensaje de cuenta regresiva personalizado para cada número de 10 a 1, y al final mostrar el mensaje: "¡Aprovecha la promoción ahora!".
+
+#Crea un programa que utilice un bucle for para mostrar los siguientes mensajes:
+
+#Para números pares, muestra: "Faltan solo <número> segundos - ¡No pierdas esta oportunidad!".
+#Para números impares, muestra: "La cuenta continúa: <número> segundos restantes.".
+#Al final de la cuenta, muestra el mensaje: "¡Aprovecha la promoción ahora!".
+
+Código:
+print("--- Inicio de la Cuenta Regresiva de la Librería ---")
+
+# 1. Bucle FOR con RANGE para la cuenta regresiva (10 a 1)
+# range(inicio, parada, paso)
+# inicio: 10
+# parada: 0 (se detiene antes de llegar a 0)
+# paso: -1 (va restando de 1 en 1)
+for numero in range(10, 0, -1):
+    
+    # 2. Lógica IF/ELSE con el Módulo (%) para Par o Impar
+    # Si el residuo de dividir por 2 es 0, es PAR.
+    if numero % 2 == 0:
+        # Mensaje para números PARES
+        print(f"Faltan solo {numero} segundos - ¡No pierdas esta oportunidad!")
+    else:
+        # Mensaje para números IMPARES
+        print(f"La cuenta continúa: {numero} segundos restantes.")
+
+# 3. Mensaje final, fuera del bucle
+print("\n¡Aprovecha la promoción ahora!")
+
+Problema 9
